@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kongkow Cafe</title>
+
+    <style>
+        .header {
+            background: url("assets/header.jpg") no-repeat top center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-height: 800px;
+            aspect-ratio: 1280/720;
+            background-size: cover;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            margin: 256px 0;
+            /*Note: EQUALS:
+                margin-bottom: 256px;
+                margin-top: 256px; 
+            */
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .menu-grid {
+            display: grid;
+            margin: 0;
+            padding: 0 64px;
+            grid-template-columns: auto auto auto auto;
+            gap: 32px;
+            padding-bottom: 64px;
+        }
+
+        .menu-card {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 32px;
+            background-color: #fafafa;
+            border: 4px solid #fafafa;
+
+            img {
+                aspect-ratio: 1;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="content">
+        <img src="assets/logo_full.png" alt="Logo" class="logo" />
+
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="assets/salad.jpg" alt="salad">
+                <h3 class="menu-name">Avocado Pesto Salad</h3>
+                <p>"Freshness of healthy nature brought into your plate"</p>
+                <h3 class="price">35</h3>
+                <p>+ Grilled Salmon</p>
+                <h3>55</h3>
+            </div>
+
+            <div class="menu-card">
+                <img src="assets/pizza.jpg" alt="pizza">
+                <h3 class="menu-name">Triple Cheese Pizza</h3>
+                <p>"Indulge yourself in this simple yet delicious delicacy"</p>
+                <p>1 Slice</p>
+                <h3>15</h3>
+                <p>Pan (6 Slices)</p>
+                <h3>60</h3>
+            </div>
+
+            <div class="menu-card">
+                <img src="assets/wine.jpg" alt="wine">
+                <h3 class="menu-name">Seasonal Wine</h3>
+                <p>"A great meal becomes perfect when combined with a good wine"</p>
+                <p>Glass </p>
+                <h3>100</h3>
+                <p>Bottle </p>
+                <h3>1500</h3>
+            </div>
+
+            <div class="menu-card">
+                <img src="assets/coffee.jpg" alt="coffee">
+                <h3 class="menu-name">Coffee</h3>
+                <p>"The best coffee you can have from the land of Indonesia"</p>
+                <p>Americano</p>
+                <h3>25</h3>
+                <p>Latte</p>
+                <h3>30</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
