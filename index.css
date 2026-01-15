@@ -140,3 +140,7 @@ body {
     box-sizing: border-box;
     font-size: 10pt;
 }
+
+button {
+    all: unset;
+}
