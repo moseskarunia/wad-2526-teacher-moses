@@ -18,20 +18,20 @@
 
         <div class="menu-grid">
             <div class="menu-card">
-                <img src="assets/salad.jpg" alt="salad">
+                <img src="assets/salad.jpg" alt="salad" id="pic">
                 <h3 class="menu-name">Avocado Pesto Salad</h3>
                 <p class="menu-description">"Freshness of healthy nature brought into your plate"</p>
                 <div class="menu-price-row">
                     <div></div>
                     <div class="price-and-qty">
                         <h3 class="price">35</h3>
-                        <button>
+                        <button onclick="document.getElementById('qty').innerHTML='0'">
                             <span class="material-symbols-outlined">
                                 do_not_disturb_on
                             </span>
                         </button>
-                        <span class="qty">0</span>
-                        <button>
+                        <span class="qty" id="qty">0</span>
+                        <button onclick="document.getElementById('qty').innerHTML='1'">
                             <span class="material-symbols-outlined">
                                 add_circle
                             </span>
@@ -42,13 +42,13 @@
                     <p class="price-description">+ Grilled Salmon</p>
                     <div class="price-and-qty">
                         <h3 class="price">55</h3>
-                        <button>
+                        <button onclick="document.getElementById('pic').src='assets/salad.jpg'">
                             <span class="material-symbols-outlined">
                                 do_not_disturb_on
                             </span>
                         </button>
                         <span class="qty">0</span>
-                        <button>
+                        <button onclick="document.getElementById('pic').src='assets/pizza.jpg'">
                             <span class="material-symbols-outlined">
                                 add_circle
                             </span>
@@ -58,20 +58,20 @@
             </div>
 
             <div class="menu-card">
-                <img src="assets/pizza.jpg" alt="pizza">
+                <img src="assets/pizza.jpg" alt="pizza" id="pic2">
                 <h3 class="menu-name">Triple Cheese Pizza</h3>
                 <p class="menu-description">"Indulge yourself in this simple yet delicious delicacy"</p>
                 <div class="menu-price-row">
                     <p class="price-description">1 Slice</p>
                     <div class="price-and-qty">
                         <h3 class="price">15</h3>
-                        <button>
+                        <button onclick="document.getElementById('qty2').style.color='black'">
                             <span class="material-symbols-outlined">
                                 do_not_disturb_on
                             </span>
                         </button>
-                        <span class="qty">0</span>
-                        <button>
+                        <span class="qty" id="qty2">0</span>
+                        <button onclick="document.getElementById('qty2').style.color='red'">
                             <span class="material-symbols-outlined">
                                 add_circle
                             </span>
@@ -82,13 +82,13 @@
                     <p class="price-description">Pan (6 Slices)</p>
                     <div class="price-and-qty">
                         <h3 class="price">60</h3>
-                        <button>
+                        <button onclick="document.getElementById('pic2').style.display='none'">
                             <span class="material-symbols-outlined">
                                 do_not_disturb_on
                             </span>
                         </button>
                         <span class="qty">0</span>
-                        <button>
+                        <button onclick="document.getElementById('pic2').style.display='block'">
                             <span class="material-symbols-outlined">
                                 add_circle
                             </span>
