@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -25,13 +26,13 @@
                     <div></div>
                     <div class="price-and-qty">
                         <h3 class="price">35</h3>
-                        <button onclick="document.getElementById('qty').innerHTML='0'">
+                        <button onclick="substractQty()">
                             <span class="material-symbols-outlined">
                                 do_not_disturb_on
                             </span>
                         </button>
                         <span class="qty" id="qty">0</span>
-                        <button onclick="document.getElementById('qty').innerHTML='1'">
+                        <button onclick="addQty()">
                             <span class="material-symbols-outlined">
                                 add_circle
                             </span>
