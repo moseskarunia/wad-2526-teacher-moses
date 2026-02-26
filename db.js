@@ -1,15 +1,4 @@
 const menus = [{
-    name: "Seasonal Wine",
-    description: "A great meal becomes perfect when combined with a good wine",
-    variants: [{
-        price: 100,
-        description: 'Glass'
-    }, {
-        price: 1500,
-        description: 'Bottle'
-    }],
-    photoUrl: "assets/wine.jpg"
-}, {
     name: 'Coffee',
     description: "The best coffee you can have from the land of Indonesia",
     variants: [{
@@ -20,6 +9,17 @@ const menus = [{
         description: 'Latte'
     }],
     photoUrl: "assets/coffee.jpg"
+}, {
+    name: "Seasonal Wine",
+    description: "A great meal becomes perfect when combined with a good wine",
+    variants: [{
+        price: 100,
+        description: 'Glass'
+    }, {
+        price: 1500,
+        description: 'Bottle'
+    }],
+    photoUrl: "assets/wine.jpg"
 }, {
     name: "Triple Cheese Pizza",
     description: "Indulge yourself in this simple yet delicious delicacy",
