@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
 </head>
 
 <body>
@@ -17,171 +16,14 @@
     <div class="content">
         <img src="assets/logo_full.png" alt="Logo" class="logo" />
 
-        <div class="menu-grid" id="menu-grid">
-            <div class="menu-card">
-                <img src="assets/salad.jpg" alt="salad" id="pic">
-                <h3 class="menu-name">Avocado Pesto Salad</h3>
-                <p class="menu-description">"Freshness of healthy nature brought into your plate"</p>
-                <div class="menu-price-row">
-                    <div></div>
-                    <div class="price-and-qty">
-                        <h3 class="price">35</h3>
-                        <button onclick="substractQty()">
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty" id="qty">0</span>
-                        <button onclick="addQty()">
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <p class="price-description">+ Grilled Salmon</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">55</h3>
-                        <button onclick="document.getElementById('pic').src='assets/salad.jpg'">
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty">0</span>
-                        <button onclick="document.getElementById('pic').src='assets/pizza.jpg'">
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <img src="assets/pizza.jpg" alt="pizza" id="pic2">
-                <h3 class="menu-name">Triple Cheese Pizza</h3>
-                <p class="menu-description">"Indulge yourself in this simple yet delicious delicacy"</p>
-                <div class="menu-price-row">
-                    <p class="price-description">1 Slice</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">15</h3>
-                        <button onclick="document.getElementById('qty2').style.color='black'">
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty" id="qty2">0</span>
-                        <button onclick="document.getElementById('qty2').style.color='red'">
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <p class="price-description">Pan (6 Slices)</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">60</h3>
-                        <button onclick="document.getElementById('pic2').style.display='none'">
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty">0</span>
-                        <button onclick="document.getElementById('pic2').style.display='block'">
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <img src="assets/wine.jpg" alt="wine">
-                <h3 class="menu-name">Seasonal Wine</h3>
-                <p class="menu-description">"A great meal becomes perfect when combined with a good wine"</p>
-                <div class="menu-price-row">
-                    <p class="price-description">Glass</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">100</h3>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty">0</span>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <p class="price-description">Bottle</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">1500</h3>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty">0</span>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <img src="assets/coffee.jpg" alt="coffee">
-                <h3 class="menu-name">Coffee</h3>
-                <p class="menu-description">"The best coffee you can have from the land of Indonesia"</p>
-                <div class="menu-price-row">
-                    <p class="price-description">Americano</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">25</h3>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty">0</span>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <p class="price-description">Latte</p>
-                    <div class="price-and-qty">
-                        <h3 class="price">30</h3>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                do_not_disturb_on
-                            </span>
-                        </button>
-                        <span class="qty">0</span>
-                        <button>
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="menu-grid" id="menu-grid"></div>
         <div class="footer">
             (c) Kongkow Cafe, 2025
         </div>
     </div>
 </body>
+
+<script src="db.js"></script>
+<script src="index.js"></script>
 
 </html>
