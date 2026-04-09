@@ -6,19 +6,24 @@ let cart = [];
 setupCart();
 renderMenus();
 
-function substractQty() {
-    qty = qty - 1; // OR qty -= 1
+function substractQty(menuIndex, variantIndex) {
+    cart[menuIndex][variantIndex] -= 1;
 
-    if (qty < 0) { // Same with ==> if (qty < 0) qty = 0;
-        qty = 0;
+    if (cart[menuIndex][variantIndex] < 0) {
+        cart[menuIndex][variantIndex] = 0;
     }
 
-    document.getElementById('qty').innerHTML = qty;
+    const id = `qty-${menuIndex}-${variantIndex}`;
+
+    document.getElementById(id).innerHTML = cart[menuIndex][variantIndex];
 }
 
-function addQty() {
-    qty = qty + 1; // OR qty += 1
-    document.getElementById('qty').innerHTML = qty;
+function addQty(menuIndex, variantIndex) {
+    cart[menuIndex][variantIndex] += 1;
+
+    const id = `qty-${menuIndex}-${variantIndex}`;
+
+    document.getElementById(id).innerHTML = cart[menuIndex][variantIndex];
 }
 
 function setupCart() {
@@ -37,18 +42,21 @@ function renderMenus() {
     for (let i = 0; i < menus.length; i++) {
         let menuVariantList = '';
         for (let j = 0; j < menus[i].variants.length; j++) {
+            
+            const qtyId = `qty-${i}-${j}`;
+
             menuVariantList += `
                 <div class="menu-price-row">
                     <div class="price-description">${menus[i].variants[j].description}</div>
                     <div class="price-and-qty">
                         <h3 class="price">${menus[i].variants[j].price}</h3>
-                        <button onclick="substractQty()">
+                        <button onclick="substractQty(${i}, ${j})">
                             <span class="material-symbols-outlined">
                                 do_not_disturb_on
                             </span>
                         </button>
-                        <span class="qty" id="qty">0</span>
-                        <button onclick="addQty()">
+                        <span class="qty" id="${qtyId}">0</span>
+                        <button onclick="addQty(${i}, ${j})">
                             <span class="material-symbols-outlined">
                                 add_circle
                             </span>
