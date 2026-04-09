@@ -26,9 +26,6 @@ const menus = [{
     variants: [{
         price: 15,
         description: "Slice"
-    }, {
-        price: 60,
-        description: "Pan (6 Slices)"
     }],
     photoUrl: "assets/pizza.jpg",
 }, {
@@ -37,6 +34,9 @@ const menus = [{
     variants: [{
         price: 35,
         description: ''
+    }, {
+        price: 45,
+        description: '+Tuna'
     }, {
         price: 55,
         description: '+Grilled Salmon'
