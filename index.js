@@ -11,6 +11,10 @@ function substractQty(menuIndex, variantIndex) {
 
     if (cart[menuIndex][variantIndex] < 0) {
         cart[menuIndex][variantIndex] = 0;
+
+        const menuName = menus[menuIndex].name;
+        const variantName = menus[menuIndex].variants[variantIndex].description;
+        alert(`${menuName} - ${variantName} cannot be less than 0`);
     }
 
     const id = `qty-${menuIndex}-${variantIndex}`;
@@ -42,7 +46,7 @@ function renderMenus() {
     for (let i = 0; i < menus.length; i++) {
         let menuVariantList = '';
         for (let j = 0; j < menus[i].variants.length; j++) {
-            
+
             const qtyId = `qty-${i}-${j}`;
 
             menuVariantList += `
