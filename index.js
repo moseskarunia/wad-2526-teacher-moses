@@ -14,7 +14,7 @@ function substractQty(menuIndex, variantIndex) {
 
         const menuName = menus[menuIndex].name;
         const variantName = menus[menuIndex].variants[variantIndex].description;
-        alert(`${menuName} - ${variantName} cannot be less than 0`);
+        alert(`${menuName} - ${variantName} cannot be less than 0.`);
     }
 
     const id = `qty-${menuIndex}-${variantIndex}`;
@@ -24,6 +24,14 @@ function substractQty(menuIndex, variantIndex) {
 
 function addQty(menuIndex, variantIndex) {
     cart[menuIndex][variantIndex] += 1;
+
+    const stock = menus[menuIndex].variants[variantIndex].stock;
+    if (cart[menuIndex][variantIndex] > stock) {
+        cart[menuIndex][variantIndex] = stock;
+        const menuName = menus[menuIndex].name;
+        const variantName = menus[menuIndex].variants[variantIndex].description;
+        alert(`${menuName} - ${variantName} cannot exceed ${stock}.`);
+    }
 
     const id = `qty-${menuIndex}-${variantIndex}`;
 
@@ -36,7 +44,7 @@ function setupCart() {
         for (let j = 0; j < menus[i].variants.length; j++) {
             variantCart.push(0);
         }
-        cart.push(variantCart);
+        cart[i] = variantCart;
     }
 }
 
