@@ -139,8 +139,18 @@ body {
     width: 100%;
     box-sizing: border-box;
     font-size: 10pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {
     all: unset;
+}
+
+button.checkout{
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    background-color: green;
 }

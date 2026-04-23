@@ -90,3 +90,23 @@ function renderMenus() {
 
     document.getElementById('menu-grid').innerHTML = menuGrid;
 }
+
+function checkout() {
+    let total = 0;
+    for (let i = 0; i < menus.length; i++) {
+        const m = menus[i];
+        for (let j = 0; j < m.variants.length; j++) {
+            const v = m.variants[j];
+            total += cart[i][j] * v.price;
+        }
+    }
+
+    if (total <= 0) {
+        alert('Select at least 1 menu variant first.');
+        return;
+    }
+
+    alert(`Thanks for your business. Total order is IDR ${total}.`);
+    setupCart();
+    renderMenus();
+}
