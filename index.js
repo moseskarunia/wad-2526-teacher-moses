@@ -105,8 +105,10 @@ function checkout() {
         alert('Select at least 1 menu variant first.');
         return;
     }
+    
+    const params = new URLSearchParams();
 
-    alert(`Thanks for your business. Total order is IDR ${total}.`);
-    setupCart();
-    renderMenus();
+    params.set('cart', JSON.stringify(cart));
+    params.set('anotherthing', 'hello');
+    window.location.href = `order-confirmation/index.html?${params.toString()}`;
 }
